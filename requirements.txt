@@ -1,7 +1,7 @@
 autopep8==1.6.0
 greenlet==1.1.2
 importlib-metadata==4.8.1
-#neo4j==4.3.7
+neo4j==4.3.7
 numpy==1.19.5
 pandas==1.1.5
 pipetools==1.0.1
