@@ -19,20 +19,15 @@ def main():
                         format='%(asctime)s:%(filename)s:%(levelname)s - %(message)s',
                         datefmt='%Y-%b-%d %X%z',
                         level=logging.INFO)
-
-    
-        sqlite = Sqlite()
-        pg = Postgres()
-
-        logging.info('Get data from production db')
-        df = pd.read_sql(sql=text(get_query()), con=pg.get_connection())
-
-        logging.info('Drop function table in local db')
-        sqlite.execute('DROP table IF EXISTS functions')
-
-        logging.info('Insert function definition to local db')
-        df.to_sql('functions', con=sqlite.get_connection())
-        logging.info('pull.py done')
+    sqlite = Sqlite()
+    pg = Postgres()
+    logging.info('Get data from production db')
+    df = pd.read_sql(sql=text(get_query()), con=pg.get_connection())
+    logging.info('Drop function table in local db')
+    sqlite.execute('DROP table IF EXISTS functions')
+    logging.info('Insert function definition to local db')
+    df.to_sql('functions', con=sqlite.get_connection())
+    logging.info('pull.py done')
 
 
 if __name__ == '__main__':
