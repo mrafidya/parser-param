@@ -33,10 +33,6 @@ def main():
         logging.info('Insert function definition to local db')
         df.to_sql('functions', con=sqlite.get_connection())
         logging.info('pull.py done')
-    
-        logging.error('Exception occurred!')
-        logging.error(f'Exception captured:{exc_info()[0]}')
-        exit(1)
 
 
 if __name__ == '__main__':
