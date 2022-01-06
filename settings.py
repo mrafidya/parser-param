@@ -3,7 +3,7 @@ sqlite_db = 'data/function.db'
 psql_host = '10.16.30.198'
 psql_username = 'internship'
 psql_password = 'Sm@rtfren_2021'
-psql_db = 'dev'
+psql_db = 'mtrass'
 psql_schema = 'tmp'
 psql_table = 'mr_function_param'
 
