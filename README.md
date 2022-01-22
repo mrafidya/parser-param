@@ -2,7 +2,7 @@
 
 ## Deskripsi
 
-Parser fungsi postgresql untuk mengambil metadata dependensi tabel.
+Parser fungsi postgresql untuk mengambil parameter pada function.
 
 ## *Quick Start*
 
@@ -28,12 +28,12 @@ Jika perintah `git` gagal, silahkan pasang terlebih dahulu.
 Jalankan perintah berikut untuk menyalin *source code* dengan `git`:
 
 ```bash
-git clone https://github.com/rochimfn/pgsql-parser-func.git
+git clone https://github.com/rochimfn/parser-param.git
 ```
 ### 2. Masuk ke direktori
 
 ```
-cd pgsql-parser-func
+cd parser-param
 ```
 
 ### 3. Memasang dependensi
@@ -59,12 +59,12 @@ psql_username = 'admin'
 psql_password = 'password'
 psql_db = 'dev'
 psql_schema = 'public'
-psql_table = 'hasil_parsing'
+psql_table = 'dummy'
 
 neo4j_driver = 'neo4j'
 neo4j_host = 'localhost'
-neo4j_username = 'neo4j'
-neo4j_password = 'password'
+neo4j_username = 'dummy'
+neo4j_password = 'dummypassword'
 
 ```
 
@@ -149,17 +149,17 @@ Contoh:
 ```python
 sqlite_db = 'data/function.db'
 
-psql_host = '127.0.0.1'
+psql_host = '127.0.0.0'
 psql_username = 'admin'
 psql_password = 'password'
 psql_db = 'dev'
-psql_schema = 'public'
-psql_table = 'hasil_parsing'
+psql_schema = 'dummy'
+psql_table = 'dummy'
 
 neo4j_driver = 'neo4j'
 neo4j_host = 'localhost'
-neo4j_username = 'neo4j'
-neo4j_password = 'password'
+neo4j_username = 'dummy'
+neo4j_password = 'dummypassword'
 
 ```
 
@@ -218,27 +218,3 @@ python push.py
 ```
 
 Jika eksekusi berhasil, relasi antar fungsi dan tabel akan tersimpan pada database neo4j.
-
-## Troubleshooting
-
-### Error: gcc executable not found
-* Solusi:
-    * ubuntu: pasang `build-essential`
-    * centos: pasang `gcc gcc-c++ make `
-
-
-### Error: pg_config executable not found
-* Referensi: https://stackoverflow.com/questions/11618898/pg-config-executable-not-found
-* Solusi: 
-	* ubuntu: pasang `libpq-dev`
-	* centos: pasang `libpq-devel`
-
-### psycopg: Python.h: No such file or directory
-* Referensi https://stackoverflow.com/questions/19843945/psycopg-python-h-no-such-file-or-directory
-* Solusi:
-	* pasang python versi dev `python3-dev` atau `python3-devel`
-
-### Error lain
-* Solusi:
-    * [Google](https://www.google.com)
-    * Buat [tiket](https://github.com/rochimfn/pgsql-parser-func/issues/new)
