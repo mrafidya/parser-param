@@ -1,10 +1,10 @@
 sqlite_db = 'data/function.db'
 
 psql_host = '10.asasas8'
-psql_username = 'internship'
-psql_password = 'ass1'
+psql_username = 'dummy'
+psql_password = 'dummy'
 psql_db = 'mtrass'
-psql_schema = 'tmp'
+psql_schema = 'dummy'
 psql_table = 'mr_function_param'
 
 neo4j_driver = 'neo4j'
