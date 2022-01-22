@@ -10,9 +10,7 @@ def extract(lists):
     for item in lists:
         item = item.lower()
         c=0
-        if (('V_CURR_DATE' in item)
-                and ':=' in item
-                and 'now()' in item):
+        if ( dummy detector):
             
             stmt = item.split(' ')
             for idx, target in enumerate(stmt):
