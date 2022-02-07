@@ -5,7 +5,7 @@ psql_username = 'dummy'
 psql_password = 'dummy'
 psql_db = 'mtrass'
 psql_schema = 'dummy'
-psql_table = 'mr_function_param'
+psql_table = 'function_param'
 
 neo4j_driver = 'neo4j'
 neo4j_host = 'localhost'
